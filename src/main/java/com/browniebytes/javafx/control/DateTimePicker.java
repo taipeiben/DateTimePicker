@@ -92,6 +92,15 @@ public class DateTimePicker extends HBox implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		textField.setText(formatter.format(dateTime.get()));
+
+		dateTime.addListener(
+				(observable, oldValue, newValue) -> {
+					popup.setDate(newValue.toLocalDate());
+					popup.setTime(newValue.toLocalTime());
+
+					textField.setText(formatter.format(newValue));
+				});
+
 		button.prefHeightProperty().bind(textField.heightProperty());
 
 		popupContainer.getContent().add(popup);

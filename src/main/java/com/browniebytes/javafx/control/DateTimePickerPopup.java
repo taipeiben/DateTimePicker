@@ -87,8 +87,19 @@ class DateTimePickerPopup extends VBox implements Initializable {
 		accordion.setExpandedPane(accordion.getPanes().get(1));
 	}
 
+	void setDate(final LocalDate date) {
+		datePicker.setValue(date);
+	}
+
 	LocalDate getDate() {
 		return datePicker.getValue();
+	}
+
+	void setTime(final LocalTime time) {
+		hour = time.getHour();
+		minute = time.getMinute();
+		second = time.getSecond();
+		setTimeButtonText();
 	}
 
 	LocalTime getTime() {
