@@ -5,8 +5,8 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.browniebytes.javafx.control</groupId>
-	<artifactId>DateTimePicker</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>datetime-picker</artifactId>
+	<version>0.0.1</version>
 
 	<build>
 		<plugins>
